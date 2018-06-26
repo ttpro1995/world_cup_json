@@ -28,7 +28,7 @@ gem 'rack-attack'
 gem 'rack-cors', require: 'rack/cors'
 gem 'rails_autoscale_agent'
 gem 'redis-rails'
-gem 'scout_apm'
+
 gem 'responders', '~> 2.0'
 gem 'watir'
 
