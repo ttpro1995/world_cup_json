@@ -24,7 +24,7 @@ def init_browser
   if (chrome_bin = ENV.fetch('GOOGLE_CHROME_SHIM', nil))
     options.add_argument "no-sandbox"
     options.binary = chrome_bin
-    Selenium::WebDriver::Chrome.driver_path = "/app/.chromedriver/bin/chromedriver"
+    Selenium::WebDriver::Chrome.driver_path = "/root/dep/chromedriver"
   end
   options.add_argument "window-size=800x600"
   options.add_argument "headless"
