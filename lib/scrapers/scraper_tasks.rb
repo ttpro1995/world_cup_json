@@ -11,19 +11,16 @@ module Scrapers
     # then look for goals/events/stats
     def self.scrape_your_heart_out
       me = self.new
+      me.check_for_live_game
       if Match.in_progress.count.positive?
         me.scrape_for_events
         me.scrape_for_stats
-      else
-        me.check_for_live_game
       end
     end
 
     def self.check_for_live_game_occasionally
       me = self.new
-      if Match.in_progress.count == 0
-        me.check_for_live_game
-      end
+      me.check_for_live_game
     end
 
     # sometimes FIFA adds stats/events after the match closes

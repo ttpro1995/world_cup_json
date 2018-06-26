@@ -178,8 +178,12 @@ module Scrapers
       @red_cards ||= parse_stats(36, 'red cards')
     end
 
+    def second_yellow
+      @second_yellow ||= parse_stats(38, 'second yellow card and red card')
+    end
+
     def fouls_committed
-      @fouls_committed ||= parse_stats(38, 'fouls committed')
+      @fouls_committed ||= parse_stats(40, 'fouls committed')
     end
   end
 end
